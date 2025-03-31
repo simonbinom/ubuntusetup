@@ -12,6 +12,10 @@ set -e
 echo "Updating system..."
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y
 
+# Update all Snap packages
+echo "Updating snaps..."
+sudo snap refresh
+
 # Install essential tools and developer utilities
 echo "Installing essential tools and developer utilities..."
 sudo apt install -y git curl wget gnome-tweaks gnome-shell-extension-manager python3-pip python3-venv pipx clinfo gamemode mangohud qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager
@@ -37,6 +41,10 @@ sudo apt install -y libze-intel-gpu1 libze1 intel-opencl-icd clinfo intel-gsc li
 # Installing applications via Snap
 echo "Installing VS Code via snap..."
 sudo snap install code --classic
+
+# Installing 1Password via snap
+echo "Installing 1Password via snap..."
+sudo snap install 1password --classic
 
 echo "Installing PowerShell via snap..."
 sudo snap install powershell --classic
@@ -78,7 +86,7 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 # Install needed packages
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # Add current user to docker group
 sudo usermod -aG docker $USER
