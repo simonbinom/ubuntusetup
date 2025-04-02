@@ -1,4 +1,6 @@
-# ubuntusetup
-Ubuntu 24.04 LTS post-install script for Intel NUC12SNKi72 optimized for Gaming, LLMs, Development and Virtualization.
+# Ubuntu 24.04 LTS Post-Install Script for Intel NUC12SNKi72
 
-WARNING: very specific for NUC12SNKi72, do not use for other systems without changes to the script!
+Optimized for **Gaming**, **LLMs**, **Development**, and **Virtualization**.
+
+> ⚠️ **Warning:** This script is **highly specific** to the **Intel NUC12SNKi72**.  
+> Do **not** use it on other systems without thoroughly reviewing and adapting it to your hardware setup.
